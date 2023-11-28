@@ -16,13 +16,12 @@ sendButton.addEventListener("click",
     function(){
 
         gridElement.innerHTML = "";
-        for (let i = 0; i < 100; i++) {
+        for (let i = 1; i <= 100; i++) {
 
             const square = document.createElement("div");
             square.classList.add("square");
             grid.append(square);
-            
+            square.append(i);
         }
-
     }
 )
