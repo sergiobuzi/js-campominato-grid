@@ -15,13 +15,24 @@ sendButton.addEventListener("click",
 
     function(){
 
-        gridElement.innerHTML = "";
-        for (let i = 1; i <= 100; i++) {
 
-            const square = document.createElement("div");
-            square.classList.add("square");
-            grid.append(square);
-            square.append(i);
+        //DEBUG del pulsante play
+        gridElement.innerHTML = "";
+
+
+        for (let i = 1; i <= 100; i++) {    //avvio il ciclo che mi genera 100 div
+
+            const square = document.createElement("div");  //crea degli elmenti chiamati div
+            square.classList.add("square");               //aggiunge la classe square ai div
+            grid.append(square);                         //inserisce i div dentro il container grid              
+            square.append(i);                           //inserisce dentro square il numero relativo a se stesso
+            
+
+            square.addEventListener('click',            //aggiunge all elemento square l'evento click
+                function() {
+                    square.classList.add('active');       //al click aggiunge la classe active
+                }
+            );  
         }
     }
-)
+);
