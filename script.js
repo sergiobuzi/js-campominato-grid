@@ -31,6 +31,7 @@ sendButton.addEventListener("click",
             square.addEventListener('click',            //aggiunge all elemento square l'evento click
                 function() {
                     square.classList.add('active');       //al click aggiunge la classe active
+                    console.log("Hai selezionato la cella numero:", i);
                 }
             );  
         }
