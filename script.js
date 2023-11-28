@@ -7,14 +7,22 @@
 
 //seleziono il contenitore dall'html e il bottone
 const gridElement = document.getElementById("grid");
-const sendButton = document.getElementById("send")
+const sendButton = document.getElementById("send");
+
 
 //attivo la funzione del click al bottone
 sendButton.addEventListener("click",
 
     function(){
 
-        
+        gridElement.innerHTML = "";
+        for (let i = 0; i < 100; i++) {
+
+            const square = document.createElement("div");
+            square.classList.add("square");
+            grid.append(square);
+            
+        }
 
     }
 )
